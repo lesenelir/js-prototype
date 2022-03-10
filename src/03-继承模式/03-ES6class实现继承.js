@@ -16,6 +16,7 @@ class Person {
 
 class Student extends Person {
   constructor(name, score) {
+    // 调用super 实质是执行了父类的构造函数
     super(name)
     this.score = score
   }
