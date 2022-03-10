@@ -26,6 +26,7 @@ let fn = new Fn()
 fn.test1()   // 调用自身的方法
 fn.__proto__.test2()
 fn.test2()   // 调用__proto__ 隐式属性的方法
+Fn.prototype.test2()
 console.log(fn.__proto__.test2() === fn.test2())  // true
 console.log(fn.toString())
 
