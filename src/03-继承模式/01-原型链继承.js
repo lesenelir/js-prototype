@@ -29,15 +29,25 @@ function Dog() {
 
 // 子类型的原型为父类型的一个实例对象
 // Dog.prototype = new Animal()
-Dog.prototype.__proto__ = Animal.prototype
-console.log(Dog.prototype.constructor)
+// Dog.prototype.__proto__ = Animal.prototype
+// console.log(Dog.prototype.constructor)
+//
+// Dog.prototype.showDog = function () {
+//   console.log(this.dogName)
+// }
+//
+// let dog1 = new Dog()
+// dog1.showDog()
 
-Dog.prototype.showDog = function () {
-  console.log(this.dogName)
-}
+
+// 子类原型指向父类的一个实例对象
+Dog.prototype = new Animal()
+console.log(Dog.prototype.__proto__)
 
 let dog1 = new Dog()
-dog1.showDog()
+dog1.showAnimal()
 
+console.log(Dog.prototype.constructor) // Animal 此时会修改子类原型对象的构造函数指向
+Dog.prototype.constructor = Dog // 重新修改
 
 

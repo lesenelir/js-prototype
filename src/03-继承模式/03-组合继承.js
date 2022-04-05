@@ -15,14 +15,12 @@ Person.prototype.setName = function (name) {
 }
 
 function Student(name, age, price) {
-  Person.call(this, name, age) // 得到属性
-  /*this.name = name
-  this.age = age*/
+  Person.call(this, name, age) // 为了得到属性 this.Person(name, agea3)
   this.price = price
 }
 
 // 子类型的原型 = 父类型的实例
-Student.prototype = new Person()
+Student.prototype = new Person() // 为了得到父类方法
 // Student.prototype.__proto__ = Person.prototype
 // 利用对象形式修改了原型对象，要利用constructor指回原来的原型对象
 Student.prototype.constructor = Student // 修正constructor属性

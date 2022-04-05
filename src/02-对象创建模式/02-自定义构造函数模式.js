@@ -26,3 +26,5 @@ function Student(name, price) {
 
 let s =  new Student('Bob', 1000)
 console.log(s instanceof Student)
+
+console.log(Person.__proto__ === Function.prototype)
