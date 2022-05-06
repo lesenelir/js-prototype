@@ -20,3 +20,8 @@ console.log(Function instanceof Function)
 console.log(Function instanceof Object)
 
 // 【关键：】 如果B函数的显式原型对象在A的对象的原型链(__proto__查找)上，则返回true
+// 解释： 如果A可以通过__proto__ 属性找到B的原型对象 B.prototype 则返回为true
+
+
+// Foo.prototype 是一个普通对象， 普通对象都是继承 Object.prototype 即__proto__指向Object.prototype
+
